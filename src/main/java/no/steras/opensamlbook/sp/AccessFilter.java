@@ -15,6 +15,7 @@ import org.opensaml.messaging.pipeline.servlet.BasicHttpServletMessagePipeline;
 import org.opensaml.messaging.pipeline.servlet.HttpServletMessagePipeline;
 import org.opensaml.saml.common.SAMLObject;
 import org.opensaml.saml.common.binding.security.impl.SAMLOutboundProtocolMessageSigningHandler;
+import org.opensaml.saml.common.messaging.context.SAMLBindingContext;
 import org.opensaml.saml.common.messaging.context.SAMLEndpointContext;
 import org.opensaml.saml.common.messaging.context.SAMLPeerEntityContext;
 import org.opensaml.saml.common.xml.SAMLConstants;
@@ -89,6 +90,9 @@ public class AccessFilter implements Filter {
         MessageContext context = new MessageContext();
 
         context.setMessage(authnRequest);
+
+        SAMLBindingContext bindingContext = context.getSubcontext(SAMLBindingContext.class, true);
+        bindingContext.setRelayState("teststate");
 
         SAMLPeerEntityContext peerEntityContext = context.getSubcontext(SAMLPeerEntityContext.class, true);
 
