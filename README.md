@@ -1,5 +1,5 @@
 # OpenSAML V3 example project
-This is a simple example project used in the book [*A Guide to OpenSAML V3*](https://blog.samlsecurity.com/book/?utm_source=github&utm_medium=link&utm_campaign=opensaml_samples_collection&utm_content=opensamlv3-project)
+This is a simple example project used in the book [*A Guide to OpenSAML V3*](https://shop.samlsecurity.com?utm_source=github&utm_medium=link&utm_campaign=opensaml_samples_collection&utm_content=opensamlv3-project)
 
 The project show how to implement SAML 2.0 Web browser SSO profile using OpenSAML V3 in Java.
 
